@@ -1,7 +1,7 @@
 <?php
 require ('functions/includes.php');
 require ('functions/wp_bootstrap_menuwalker.php');
-//require ('functions/custom_post_type.php');
+require ('functions/custom_post_type.php');
 require('functions/opcoes-thema.php');
 
 global $diretorio;

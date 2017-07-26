@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "estilo.min.css",
+	"sources": [
+		"../../global/css/main.scss",
+		"../../global/css/_variavel.scss",
+		"../../global/css/_tipografia.scss",
+		"../../global/css/_layout.scss",
+		"../../global/css/_responsive.scss"
+	],
+	"names": [],
+	"mappings": "AEAA,OAAO,CAAC,+DAAI,CCAZ,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,6BAA6B,CAC3C"
+}
