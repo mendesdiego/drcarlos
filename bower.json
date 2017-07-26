@@ -1,12 +1,12 @@
 {
-  "name": "Comunibeer",
-  "description": "Comunidade cervejeira",
+  "name": "drcarlos",
+  "description": "site dr carlos",
   "main": "index.php",
   "authors": [
-    "Thiago Mendes"
+    "Diego Mendes"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/thiagotmendes/comunibeer",
+  "homepage": "https://github.com/mendesdiego/drcarlos",
   "ignore": [
     "**/.*",
     "node_modules",
