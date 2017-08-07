@@ -1,0 +1,103 @@
+@media screen and (min-width: 768px) {
+  .navbar-nav {
+    margin-top: 17px;
+  }
+
+  .depoimento-img {
+    text-align: center;
+    width: 110px;
+  }
+
+  .depoimento-img img {
+    border-radius: 150px;
+    border: 6px solid #E7E7E7;
+  }
+
+  .desc-servico {
+    margin-top: 25px;
+  }
+
+  .border-selo {
+    border-right: 1px solid #dddddd !important;
+  }
+
+  .line {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 80px;
+    position: absolute;
+    top: 12%;
+    transform: translate(0, -50%);
+  }
+
+  .line-direita {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 35px;
+    position: absolute;
+    bottom: 7%;
+    transform: translate(0, -50%);
+  }
+
+  .breadcrumb-page {
+    float: right;
+    margin-right: 10px;
+  }
+
+  .texto-testimonial {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .menu-principal-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .btn-search {
+    margin-top: 8px;
+    margin-right: -25px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .depoimento-img {
+    width: 130px;
+  }
+
+  .ass-testimonial {
+    float: right;
+  }
+
+  .ass-testimonial span {
+    float: right;
+  }
+
+  .desc-servico {
+    margin-top: 0px;
+  }
+
+  .line {
+    width: 87%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 80px;
+    position: absolute;
+    top: 20%;
+    transform: translate(0, -50%);
+  }
+
+  .line-direita {
+    width: 87%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 35px;
+    position: absolute;
+    bottom: 10%;
+    transform: translate(0, -50%);
+  }
+}

@@ -214,3 +214,82 @@ function title_page(){
     wp_title('|');
   }
 }
+
+/*-----------------------------------------------------------------------------*
+  Novos campos de contato
+*-----------------------------------------------------------------------------*/
+
+if ( ! function_exists('campos_redes_sociais') ) {
+  function campos_redes_sociais( $contact_fields ) {
+    // Twitter
+    $contact_fields['twitter'] = 'Twitter';
+
+    // Facebbok
+    $contact_fields['facebook'] = 'Facebook';
+
+    // Google+
+    $contact_fields['googleplus'] = 'Google+';
+
+    return $contact_fields;
+  } // tutsup_new_contact_fields
+
+  add_filter('user_contactmethods', 'campos_redes_sociais', 10, 1);
+} // function_exists
+
+/*-----------------------------------------------------------------------------*
+  Área do autor
+*-----------------------------------------------------------------------------*/
+
+if ( ! function_exists('author_area') ) {
+  function author_area() {
+    // Apenas apresentaremos a área do autor em posts na íntegra
+    if ( is_single() ):
+      $author_id = get_the_author_meta( 'ID' ); ?>
+        <!-- Área do autor -->
+        <div class="author-area clearfix">
+          <!-- Conteúdo interno da área do autor -->
+          <div class="inner-author-area">
+            <!-- Gravatar -->
+            <div class="author-gravatar">
+              <a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>">
+                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150 ); ?>
+              </a>
+            </div> <!-- author-gravatar -->
+
+            <!-- Texto sobre o autor -->
+            <p class="about-autor-text">
+              <?php _e('Sobre o autor', 'tutsup'); ?>
+            </p>
+
+            <!-- Nome e link do autor -->
+            <h3 class="about-autor-heading">
+              <a href="<?php echo get_author_posts_url( $author_id );?>">
+                <?php echo get_the_author(); ?>
+              </a>
+            </h3>
+
+            <!-- Descrição do autor -->
+            <div class="author-info">
+              <?php the_author_meta( 'description' ); ?>
+              <!-- Links sociais -->
+              <p class="social-links clearfix">
+                <?php if ( get_the_author_meta( 'facebook', $author_id ) ): ?>
+                  <a class="author-social-link" href="<?php echo get_the_author_meta( 'facebook', $author_id ); ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <?php endif;?>
+                <?php if ( get_the_author_meta( 'googleplus', $author_id ) ): ?>
+                  <a class="author-social-link" href="<?php echo get_the_author_meta( 'googleplus', $author_id );
+                  ?>?rel=author" rel="author"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <?php endif;?>
+                <?php if ( get_the_author_meta( 'twitter', $author_id ) ): ?>
+                    <a class="author-social-link" href="<?php echo get_the_author_meta( 'twitter', $author_id  );
+                    ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <?php endif;?>
+              </p>
+            </div> <!-- author-info -->
+          </div> <!-- inner-author-area -->
+        </div> <!-- author-area -->
+      <?php endif; // is_single() ?>
+      <?php
+          } // author_area
+        } // function_exists
+      ?>

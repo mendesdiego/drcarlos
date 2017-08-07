@@ -29,22 +29,20 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="" class="img-responsive"></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Sobre Nós</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">Nossos Doutores</a></li>
-              <li><a href="#">Timetable</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contato</a></li>
-              <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+              <?php
+                $args = array(
+                  'menu' => 'principal',
+                  'menu_class' => 'nav navbar-nav',
+                  'walker' => new wp_bootstrap_navwalker()
+                );
+                wp_nav_menu($args);
+               ?>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
